@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".CustomerRegister">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <EditText
+            android:id="@+id/cid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer ID"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <EditText
+            android:id="@+id/cname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer Name"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <EditText
+            android:id="@+id/caddr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer Address"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <EditText
+            android:id="@+id/cphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer Phone no"
+            android:ems="10"
+            android:inputType="phone"
+            android:textSize="20dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <EditText
+            android:id="@+id/cmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Customer E-mail"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textSize="20dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/cregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_rounded"/>
+
+
+</LinearLayout>

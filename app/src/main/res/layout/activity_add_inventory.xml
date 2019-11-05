@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".AddInventory">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <EditText
+                android:id="@+id/pid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Product ID"
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="20dp"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/img_scan"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:src="@drawable/inventory_logo"/>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <EditText
+            android:id="@+id/pname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name"
+            android:ems="10"
+            android:inputType="text"
+            android:textSize="20dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <EditText
+            android:id="@+id/qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Quantity"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="20dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:ems="10"
+            android:inputType="number"
+            android:textSize="20dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+        <EditText
+            android:id="@+id/Adddate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:ems="10"
+            android:inputType="date"
+            android:textSize="20dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/add_Inventory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Inventory"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_rounded"/>
+
+</LinearLayout>
