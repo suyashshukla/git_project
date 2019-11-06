@@ -35,7 +35,7 @@ public class SellShowListActivity extends AppCompatActivity {
         idb = new InventoryDataBase(this);
         mListView = findViewById(R.id.listView);
         mList = new ArrayList<>();
-        mAdapter = new SellViewAdapter(new SellShowListActivity(),R.layout.row_sell_view_card,mList);
+        mAdapter = new SellViewAdapter(this,R.layout.row_sell_view_card,mList);
         mListView.setAdapter(mAdapter);
         grandTotalText = findViewById(R.id.next_bill);
 

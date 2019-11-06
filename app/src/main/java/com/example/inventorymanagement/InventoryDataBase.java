@@ -18,7 +18,7 @@ public class InventoryDataBase extends SQLiteOpenHelper {
 
     public static String[] User_Table_Columns = new String[]{"ID", "SHOPKEEPER_NAME", "ADDRESS", "PHONE_NO", "E_MAIL"};
     public static String[] Customer_Table_Columns = new String[]{"CID", "CUSTOMER_NAME", "ADDRESS", "PHONE_NO", "E_MAIL"};
-    public static String[] Inventory_Table_Columns = new String[]{"PRODUCT_ID", "PRODUCT_NAME", "QUANTITY", "PRICE", "DATE"};
+    public static String[] Inventory_Table_Columns = new String[]{"_id",/*"PRODUCT_ID",*/ "PRODUCT_NAME", "QUANTITY", "PRICE", "DATE"};
     /*final static String[] Transaction_Table_Columns ={"TRANSACTION_ID","PRODUCT_ID","PRODUCT_NAME","QUANTITY","PRICE","CID","ID"};*/
 
     public static String[] Query = new String[]{
@@ -94,7 +94,7 @@ public class InventoryDataBase extends SQLiteOpenHelper {
     public Cursor getProductDetails(String pid/*,int qty*/ ){
         //int pQty,rQty;
         SQLiteDatabase db  = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT *FROM "+Inventory_Table+" where PRODUCT_ID='"+pid+"'",null);
+        Cursor cursor = db.rawQuery("SELECT *FROM "+Inventory_Table+" where _id='"+pid+"'",null);
        /* cursor.moveToNext();
         pQty = cursor.getInt(2);
         if(pQty>qty) {
@@ -115,7 +115,7 @@ public class InventoryDataBase extends SQLiteOpenHelper {
         //contentValues.put(Inventory_Table_Columns[3],price);
         //contentValues.put(Inventory_Table_Columns[4],date);
 
-        db.update(Inventory_Table,contentValues,"Product_ID = ?",new String[]{pid});
+        db.update(Inventory_Table,contentValues,"_id = ?",new String[]{pid});
     }
 
     public  void dummyTable(String qry){
@@ -161,7 +161,7 @@ public class InventoryDataBase extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(Inventory_Table_Columns[2],totalQuantity);
 
-        db.update(Inventory_Table,contentValues,"Product_ID = ?",new String[]{inventoryProduct_id});
+        db.update(Inventory_Table,contentValues,"_id = ?",new String[]{inventoryProduct_id});
     }
 
     public void updateDummy(String recordProduct_id, int updatedQty) {

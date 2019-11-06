@@ -44,7 +44,7 @@ public class SellViewAdapter extends BaseAdapter {
         View rowSellCard =convertView;
         ViewHolder holder =new ViewHolder();
         if (rowSellCard == null){
-            LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = LayoutInflater.from(context);
             rowSellCard = inflater.inflate(layout,null);
             holder.txtName = rowSellCard.findViewById(R.id.txtName);
             holder.txtQuantity = rowSellCard.findViewById(R.id.txtQuantity);

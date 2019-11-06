@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.inventorymanagement">
 
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -11,14 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ScannerHelper"></activity>
-        <activity android:name=".SellShowListActivity"></activity>
+        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".BillActivity" />
+        <activity android:name=".ScannerHelper" />
+        <activity android:name=".SellShowListActivity" />
         <activity android:name=".SellProduct" />
         <activity android:name=".AddInventory" />
         <activity android:name=".CustomerRegister" />
         <activity android:name=".OwnerRegister" />
         <activity android:name=".Home" />
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +29,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

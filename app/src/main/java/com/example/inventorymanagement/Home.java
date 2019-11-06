@@ -9,6 +9,9 @@ import android.widget.Button;
 public class Home extends AppCompatActivity {
     InventoryDataBase idb;
     Button reg,customer,inventory,sell;
+
+    Button bill,search;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,35 @@ public class Home extends AppCompatActivity {
 
                 Intent intent = new Intent(Home.this,SellProduct.class);
                 startActivity(intent);
+            }
+        });
+
+        billButton();
+        searchButton();
+
+    }
+
+    public void billButton(){
+
+        bill = findViewById(R.id.bill_button);
+
+        bill.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,BillActivity.class));
+            }
+        });
+
+    }
+
+    public void searchButton(){
+
+        search = findViewById(R.id.search_button);
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,SearchActivity.class));
             }
         });
     }
